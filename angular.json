@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "@d9yuan/line-grapher-lite": {
+      "projectType": "library",
+      "root": "projects/d9yuan/line-grapher-lite",
+      "sourceRoot": "projects/d9yuan/line-grapher-lite/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/d9yuan/line-grapher-lite/tsconfig.lib.json",
+            "project": "projects/d9yuan/line-grapher-lite/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/d9yuan/line-grapher-lite/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/d9yuan/line-grapher-lite/src/test.ts",
+            "tsConfig": "projects/d9yuan/line-grapher-lite/tsconfig.spec.json",
+            "karmaConfig": "projects/d9yuan/line-grapher-lite/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/d9yuan/line-grapher-lite/tsconfig.lib.json",
+              "projects/d9yuan/line-grapher-lite/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@d9yuan/line-grapher-lite"
 }

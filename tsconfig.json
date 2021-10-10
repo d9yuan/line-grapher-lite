@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@d9yuan/line-grapher-lite": [
+        "dist/d9yuan/line-grapher-lite/d9yuan-line-grapher-lite",
+        "dist/d9yuan/line-grapher-lite"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
